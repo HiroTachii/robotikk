@@ -57,7 +57,7 @@ nav :hover {
     background-size: cover;
     background-repeat: no-repeat;
     max-height: 500px;
-    background-image: url('img/minecraft.png');
+    background-image: url('../img/minecraft.png');
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
