@@ -2,56 +2,46 @@ nav :hover {
     color: #00E676;
 }
 
-.bg-main {
+.bg-dark-main {
     background-color: #2b2b2b;
 }
 
-.bg-second {
+.bg-dark-second {
     background-color: #161616;
 }
 
-.bg-main:focus {
+.bg-dark-main:focus {
     background-color: #2b2b2b;
 }
 
-.bg-black {
-    background-color: black;
-}
-.bg-500 {
-    background-color: #4CAF50;
+.theme-main {
+    background-color: #1e88e5;
 }
 
-.bg-600 {
-    background-color: #4CAF50;
+.theme-main-text {
+    color: #1e88e5;
 }
 
-.bg-700 {
-    background-color: #388E3C;
+#main-header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 500px;
+    background-image: url('../img/minecraft.png');
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    height: 400px;
 }
 
-.bg-800 {
-    background-color: #2E7D32;
+.nunito {
+    font-family: Nunito, sans-serif;
 }
 
-.bg-a700 {
-    background-color: #00C853;
+.btn-outline-theme {
+    color: #1e88e5; border-color: #1e88e5;
 }
 
-.btn-outline-a700 {
-    color: #00C853; border-color: #00C853;
-}
 
-.text-a700 {
-    color: #00C853;
-}
-
-.bg-900 {
-    background-color: #1B5E20;
-}
-
-.btn-outline-900 {
-    color: #1B5E20; border-color: #1B5E20;
-}
 
 #main-header {
     background-size: cover;
