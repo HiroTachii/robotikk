@@ -27,4 +27,9 @@ class ViewController extends Controller
         return redirect('https://discord.gg/cXNynzh');
     }
 
+    public function github()
+    {
+        return redirect('https://github.com/robotikk-org');
+    }
+
 }

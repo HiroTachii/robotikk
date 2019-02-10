@@ -14,6 +14,12 @@
             <li class="navbar-nav mr-auto">
                 <a class="nav-link theme-main-text" href="{{ route('discord') }}">Discord</a>
             </li>
+            <li class="navbar-nav mr-auto">
+                <a class="nav-link theme-main-text" href="{{ route('github') }}">GitHub</a>
+            </li>
+            <li class="navbar-nav mr-auto">
+                <a class="nav-link theme-main-text" href="{{ route('login') }}">Log in</a>
+            </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2 btn-outline-theme bg-dark-main" type="text" placeholder="Search" aria-label="Search">
@@ -21,3 +27,4 @@
         </form>
     </div>
 </nav>
+
