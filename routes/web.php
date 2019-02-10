@@ -31,10 +31,19 @@ Route::get('/me', function () {
 | file.
 |
 */
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::get('/reset', 'ViewController@reset')->name('reset');
-Route::get('/reset/{token}', 'AuthController@verify');
+$this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+$this->post('login', 'Auth\LoginController@login');
+$this->post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// Registration Routes...
+$this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+$this->post('register', 'Auth\RegisterController@register');
+
+// Password Reset Routes...
+$this->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+$this->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+$this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+$this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
 /*
 |--------------------------------------------------------------------------
@@ -50,3 +59,5 @@ Route::prefix('api/v1/user')->group(function () {
     Route::post('login', 'Auth\LoginController@login')->name('api.login');
     ROute::post('logout', 'Auth\LoginController@logout')->name('api.logout');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
