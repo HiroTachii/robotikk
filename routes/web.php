@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'ViewController@home')->name('home');
 Route::get('/github', 'ViewController@github')->name('github');
 Route::get('/discord', 'ViewController@discord')->name('discord');
+
+Route::get('/me', function () {
+    return "hey";
+});
 /*
 |--------------------------------------------------------------------------
 | Auth Routes
