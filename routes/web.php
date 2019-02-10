@@ -35,3 +35,18 @@ Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::get('/reset', 'ViewController@reset')->name('reset');
 Route::get('/reset/{token}', 'AuthController@verify');
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Routes related to authenticating a user
+|
+*/
+
+Route::prefix('api/v1/user')->group(function () {
+    Route::post('register', 'Auth\RegisterController@register')->name('api.register');
+    Route::post('login', 'Auth\LoginController@login')->name('api.login');
+    ROute::post('logout', 'Auth\LoginController@logout')->name('api.logout');
+});
