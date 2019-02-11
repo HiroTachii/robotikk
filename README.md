@@ -7,3 +7,8 @@ Spaces aren't supposed to be between if and '('.
 * goes for while and for, too, you infidels
 
 -Djolo
+
+
+
+
+PS. "Dems" er ikke et ord.
