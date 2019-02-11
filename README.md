@@ -2,7 +2,7 @@
 The Laravel app used for the robotikk.org homepage
 
 
-Spaces aren't supposed to be between if and '('*.
+Spaces aren't supposed to be between if and '('.
 
 
 
