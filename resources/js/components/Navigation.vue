@@ -11,7 +11,7 @@
             <!-- Left nav -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link theme-main-text" href="/">Home</a>
+                    <a class="nav-link theme-main-text" v-bind:href="name">Home</a>
                 </li>
             </ul>
             <!-- Right nav -->
@@ -21,10 +21,14 @@
 
 <script>
     export default {
-        props: ['name', 'route'],
+        props: ['name'],
         data: () => {
             return {
-                'csrf': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                route: {
+                    home: '/',
+                    discord: '/discord'
+                },
+                csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
             }
         }
     }

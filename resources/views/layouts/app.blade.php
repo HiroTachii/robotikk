@@ -25,9 +25,10 @@
     @yield('styles')
 </head>
 <body class="bg-dark-main">
-    <div id="app">
-        <navigation route="{home:{{ route('home') }}}"></navigation>
 
+    <div id="app">
+        <app></app>
     </div>
+
 </body>
 </html>
