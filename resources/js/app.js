@@ -7,6 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+window.Router = require('vue-router').default;
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,7 +20,17 @@ window.Vue = require('vue');
 //const files = require.context('./', true, /\.vue$/i)
 //files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 Vue.component('app', require('./components/App').default);
+Vue.component('navigation', require('./components/Navigation').default);
+Vue.component('sidebar', require('./components/Sidebar').default);
+Vue.use(Router);
 
-const app = new Vue({
-    el: '#app'
+const router = new Router({
+    routes: [
+        { path: '/', component: app, name: 'home' }
+    ]
+});
+
+const VueApp = new Vue({
+    el: '#app',
+    router: router
 });

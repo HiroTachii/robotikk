@@ -1,13 +1,12 @@
 <template>
-    <navigation></navigation>
+    <div>
+        <navigation></navigation>
+        <sidebar></sidebar>
+    </div>
 </template>
 
 <script>
-    import Navigation from "./Navigation";
-
     export default {
-        components: {
-            Navigation
-        }
+
     }
 </script>

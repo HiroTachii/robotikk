@@ -1,17 +1,14 @@
 <template>
     <nav class="navbar navbar-expand-md bg-dark-second">
-        <a class="navbar-brand theme-main-text" href="/">
+        <a class="navbar-brand theme-main-text" v-bind:href="root">
             <img src="img/logo.png" class="d-inline-block align-top" alt="" width="30" height="30">
             Robotikk.org
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <!-- Left nav -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link theme-main-text" v-bind:href="name">Home</a>
+                    <router-link :to="{ name: 'home' }" class="nav-link theme-main-text">Home</router-link>
                 </li>
             </ul>
             <!-- Right nav -->
@@ -21,15 +18,6 @@
 
 <script>
     export default {
-        props: ['name'],
-        data: () => {
-            return {
-                route: {
-                    home: '/',
-                    discord: '/discord'
-                },
-                csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-            }
-        }
+        props: ['root'],
     }
 </script>

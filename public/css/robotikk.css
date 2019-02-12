@@ -23,18 +23,7 @@ nav :hover {
 }
 
 .theme-main-text {
-    color: #1e88e5;
-}
-
-#main-header {
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-height: 500px;
-    background-image: url('../img/kuben.jpg');
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    height: 400px;
+    color: #1e88e5!important;
 }
 
 .nunito {
@@ -50,19 +39,10 @@ nav :hover {
     border-color: #1e88e5!important;
 }
 
-
-
-#main-header {
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-height: 500px;
-    background-image: url('../img/.jpg');
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    height: 400px;
-}
-
 .nunito {
     font-family: Nunito, sans-serif;
+}
+
+body {
+    font-size: .875rem;
 }
