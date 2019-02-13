@@ -1,48 +1,20 @@
-nav :hover {
-    color: #00E676;
-}
-
-.bg-dark-main {
-    background-color: #2b2b2b;
-}
-
-.bg-dark-second {
-    background-color: #161616;
-}
-
-.bg-dark-third {
-    background-color: #242424;
-}
-
-.bg-dark-main:focus {
-    background-color: #2b2b2b;
-}
-
-.theme-main {
-    background-color: #1e88e5;
-}
-
-.theme-main-text {
-    color: #1e88e5!important;
-}
-
-.nunito {
-    font-family: Nunito, sans-serif;
-}
-
-.btn-outline-theme {
-    color: #1e88e5; border-color: #1e88e5;
-}
-
-.theme-border {
-    border: 1px solid;
-    border-color: #1e88e5!important;
-}
-
-.nunito {
-    font-family: Nunito, sans-serif;
-}
-
-body {
-    font-size: .875rem;
-}
+.r-hover-green :hover { color: #00E676; }
+/* Dark backgrounds */
+.r-bg-main { background-color: #2b2b2b; }
+.r-bg-alt { background-color: #161616; }
+.r-bg-third { background-color: #242424; }
+/* Color palettes */
+.r-color-main { background-color: #1e88e5; }
+.r-color-alt { background-color: #2196F3; }
+/* Text modifications */
+.r-text { color: #1e88e5!important; }
+.r-text-alt { color: #2196F3!important; }
+.r-text-green { color: #00E676!important; }
+.r-text-white { color: white!important; }
+/* Fonts */
+.font-nunuito { font-family: Nunito, sans-serif; }
+/* Borders */
+.r-btn-outline { color: #1e88e5; border-color: #1e88e5; }
+.r-border { border: 1px solid #1e88e5; }
+/* Globals */
+ul { list-style-type: none; padding-left: 0;}
