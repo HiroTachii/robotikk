@@ -17,11 +17,8 @@ window.Router = require('vue-router').default;
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-//const files = require.context('./', true, /\.vue$/i)
-//files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-Vue.component('home', require('./components/Home').default);
-Vue.component('navigation', require('./components/Navigation').default);
-Vue.component('sidebar', require('./components/Sidebar').default);
+const files = require.context('./', true, /\.vue$/i)
+files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 Vue.use(Router);
 
 const router = new Router({
