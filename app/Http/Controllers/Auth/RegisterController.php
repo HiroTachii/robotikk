@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -53,6 +55,19 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
+    }
+
+    public function doRegister(Request $request)
+    {
+        $validator = $this->validator($request->all());
+
+        if ($validator->failed()) {
+            return response()->json(['success' => false]);
+        }
+
+        Auth::login($this->create($request->all()));
+
+        return response()->json(["success" => true]);
     }
 
     /**

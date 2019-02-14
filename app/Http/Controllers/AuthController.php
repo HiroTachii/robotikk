@@ -10,7 +10,7 @@ class AuthController extends Controller
 
     use AuthenticatesUsers;
 
-    public $redirectTo = '/user/me';
+    public $redirectTo = '';
 
     public function __construct()
     {

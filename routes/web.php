@@ -14,12 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'ViewController@home')->name('home');
-Route::get('/github', 'ViewController@github')->name('github');
-Route::get('/discord', 'ViewController@discord')->name('discord');
-
-Route::get('/me', function () {
-    return "Dashboard.";
-});
 /*
 |--------------------------------------------------------------------------
 | Auth Routes
@@ -31,17 +25,14 @@ Route::get('/me', function () {
 | file.
 |
 */
-$this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
-$this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-$this->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
-$this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-
-Route::get('/me', 'HomeController@index')->name('dashboard');
-
 Route::prefix('api/v1/user')->group(function () {
-    Route::post('/register', 'Auth\RegisterController@register')->name('api.register');
+    Route::post('/register', 'Auth\RegisterController@doRegister')->name('api.register');
     Route::post('/login', 'Auth\LoginController@doLogin')->name('api.login');
     Route::post('/logout', 'Auth\LoginController@logout')->name('api.logout');
     Route::post('/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('api.email');
     Route::post('/reset', 'Auth\ResetPasswordController@reset')->name('api.reset');
+
+    Route::get('/login', function() {
+        return "what";
+    });
 });
