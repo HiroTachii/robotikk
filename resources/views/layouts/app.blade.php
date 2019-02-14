@@ -13,7 +13,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/robotikk.css') }}" rel="stylesheet">@yield('styles')</head>
 <body class="r-bg-main">
-{{ Auth::check() ? 'yes' : 'no' }}
 <div id="app">
     <framework></framework>
     <router-view></router-view>
