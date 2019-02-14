@@ -57,13 +57,15 @@
         methods: {
             submit: () => {
                 window.axios.post('/api/v1/user/login', {
+                    email: email.value,
+                    password: password.value,
                     maxRedirects: 0
                 })
                     .then((res) => {
                         console.log(res)
                     })
                     .catch((err) => {
-                        console.log(err)
+                        console.log(err.response)
                     })
             }
         }
