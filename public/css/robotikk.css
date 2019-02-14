@@ -16,6 +16,11 @@
 /* Borders */
 .r-btn-outline { color: #1e88e5; border-color: #1e88e5; }
 .r-border { border: 1px solid #1e88e5; }
+
+/* Box Model */
+.r-padding-1 {
+    padding: 1rem;
+}
 /* Globals */
 ul { list-style-type: none; padding-left: 0;}
 
