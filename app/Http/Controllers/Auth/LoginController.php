@@ -23,13 +23,6 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/me';
-
     public function doLogin(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
@@ -40,6 +33,8 @@ class LoginController extends Controller
             return response()->json($response);
         }
     }
+
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.

@@ -52,8 +52,11 @@
         methods: {
             submit: () => {
                 window.axios.post('/api/v1/user/login', {
-                    email: email,
-                    password: password
+                    data: {
+                        password: password,
+                        email: email
+                    },
+                    maxRedirects: 0
                 })
                     .then((res) => {
                         console.log(res)
