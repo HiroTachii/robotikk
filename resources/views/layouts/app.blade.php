@@ -14,7 +14,8 @@
     <link href="{{ asset('css/robotikk.css') }}" rel="stylesheet">@yield('styles')</head>
 <body class="r-bg-main">
 <div id="app">
-    <home></home>
+    <framework></framework>
+    <router-view></router-view>
 </div>
 </body>
 <script>

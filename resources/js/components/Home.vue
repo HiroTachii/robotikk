@@ -1,12 +1,7 @@
 <template>
     <div>
-        <navigation></navigation>
-        <sidebar></sidebar>
+        <div class="r-content">
+            <h1>Home</h1>
+        </div>
     </div>
 </template>
-
-<script>
-    export default {
-
-    }
-</script>

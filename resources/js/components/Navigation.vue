@@ -10,13 +10,16 @@
         <div class="collapse navbar-collapse" id="navbar-main">
             <!-- Left nav -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a href="//discord.gg/cXNynzh" class="nav-link r-text r-hover-green">Discord</a>
-                </li>
+
             </ul>
             <!-- Right nav -->
             <ul class="navbar-nav ml-auto">
-                
+                <li class="nav-item r-hover-green">
+                    <a target="_blank" href="//github.com/robotikk-org" class="nav-link r-text">GitHub</a>
+                </li>
+                <li class="nav-item r-hover-green">
+                    <a target="_blank" href="//discord.gg/cXNynzh" class="nav-link r-text">Discord</a>
+                </li>
             </ul>
         </div>
     </nav>

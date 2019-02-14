@@ -31,14 +31,21 @@
                     'infopages': {
                         tag: 'infopages',
                         children: [
-                            {route: 'home', text: 'Robotikk.org', type: 'route'},
-                            {route: 'home', text: 'About', type: 'route'}
+                            {route: 'us.home', text: 'Robotikk.org', type: 'route'},
+                            {route: 'us.about', text: 'About', type: 'route'}
                         ]
                     },
                     'apis': {
                         tag: 'apis',
                         children: [
-                            {route: 'home', text: 'League of Legends', type: 'route'},
+                            {route: 'apis.league', text: 'League of Legends', type: 'route'}
+                        ]
+                    },
+                    'platform': {
+                        tag: 'platform',
+                        children: [
+                            {route: 'platform.login', text: 'Login', type: 'route'},
+                            {route: 'platform.register', text: 'Register', type: 'route'}
                         ]
                     }
                 }
