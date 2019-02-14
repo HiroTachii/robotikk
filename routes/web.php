@@ -40,7 +40,7 @@ Route::get('/me', 'HomeController@index')->name('dashboard');
 
 Route::prefix('api/v1/user')->group(function () {
     Route::post('/register', 'Auth\RegisterController@register')->name('api.register');
-    Route::post('/login', 'Auth\LoginController@login')->name('api.login');
+    Route::post('/login', 'Auth\LoginController@doLogin')->name('api.login');
     Route::post('/logout', 'Auth\LoginController@logout')->name('api.logout');
     Route::post('/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('api.email');
     Route::post('/reset', 'Auth\ResetPasswordController@reset')->name('api.reset');

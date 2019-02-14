@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\Controller;
+use http\Env\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -26,6 +29,17 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/me';
+
+    public function doLogin(Request $request)
+    {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            $response = ['success' => true];
+            return response()->json($response);
+        }  else {
+            $response = ['success' => false];
+            return response()->json($response);
+        }
+    }
 
     /**
      * Create a new controller instance.
