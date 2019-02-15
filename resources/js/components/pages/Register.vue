@@ -31,7 +31,7 @@
                                         <label class="col-md-4 col-form-label text-md-right r-text" for="password">Password</label>
                                         <div class="col-md-6">
                                             <input type="password" id="password"
-                                                   class="form-control r-bg-m|ain r-border-green" v-model="password"
+                                                   class="form-control r-bg-main r-border-green" v-model="password"
                                                    required>
                                         </div>
                                     </div>

@@ -10,9 +10,7 @@
                             <div class="card-body r-bg-main">
                                 <form v-on:submit.prevent="submit" method="POST">
                                     <div class="form-group row">
-                                        <label class="col-md-4 col-form-label text-md-right r-text" for="email">E-mail
-                                            {{ email }}
-                                            Address</label>
+                                        <label class="col-md-4 col-form-label text-md-right r-text" for="email">E-mail Address</label>
                                         <div class="col-md-6">
                                             <input type="email" id="email" class="form-control r-bg-main r-border-green"
                                                    v-model="email" required autofocus>
@@ -20,8 +18,7 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label class="col-md-4 col-form-label text-md-right r-text" for="password">Password
-                                            {{ password }}</label>
+                                        <label class="col-md-4 col-form-label text-md-right r-text" for="password">Password</label>
                                         <div class="col-md-6">
                                             <input type="password" id="password"
                                                    class="form-control r-bg-main r-border-green" v-model="password"
