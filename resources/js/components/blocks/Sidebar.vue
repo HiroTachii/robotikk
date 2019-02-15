@@ -31,7 +31,7 @@
                     'infopages': {
                         tag: 'infopages',
                         children: [
-                            {route: 'us.home', text: 'Robotikk.org', type: 'route'},
+                            {route: 'us.home', text: 'Home', type: 'route'},
                             {route: 'us.about', text: 'About', type: 'route'}
                         ]
                     },
